@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title> protein tracker</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>protein tracker</h1>
+        <p>Calculate your daily protein needs</p>
+        <h2>your health starts here!</h2>
+         <label for="age">Your age:</label>
+<input type="number" id="age" placeholder="Enter your age">
+
+<br><br>
+
+<label for="weight">Your weight (kg):</label>
+<input type="number" id="weight" placeholder="Enter your weight">
+
+<br><br>
+
+<label for="height">Your height (cm):</label>
+<input type="number" id="height" placeholder="Enter your height">
+
+<br><br>
+
+<label for="activity">Activity level:</label>
+<select id="activity">
+    <option value="low">Low</option>
+    <option value="moderate">Moderate</option>
+    <option value="high">High</option>
+</select>
+
+<br><br>
+<button onclick="calculateProtein()">Calculate Protein</button>
+<p id="result"></p>
+<div id="foodSection" style="display: none;">
+
+    <h2>My Food Diary</h2>
+    <label for="selectedDate">Choose date:</label>
+<input type="date" id="selectedDate">
+
+    <p>Daily protein goal: <span id="goal">0</span> g</p>
+
+    <p>Protein consumed: <span id="consumed">0</span> g</p>
+
+    <p>Protein remaining: <span id="remaining">0</span> g</p>
+<div class="progress-container">
+    <div id="progressBar" class="progress-bar"></div>
+</div>
+
+<p id="progressText">0% of your daily goal</p>
+    <h3>🔎 Search for food</h3>
+
+<label for="foodSearch">Find a food:</label>
+<input
+    type="search"
+    id="foodSearch"
+    placeholder="Search chicken, eggs, milk..."
+>
+
+<div id="searchResults"></div>
+
+<hr>
+
+<h3>Add food manually</h3>
+<label for="foodName">Food name:</label>
+    <input type="text" id="foodName" placeholder="e.g. Chicken">
+    <br><br>
+
+    <label for="foodProtein">Protein (grams):</label>
+    <input type="number" id="foodProtein" placeholder="Protein in food">
+
+    <br><br>
+
+    <button onclick="addFood()">Add Food</button>
+
+    <h3>Today's Foods</h3>
+
+    <ul id="foodList"></ul>
+
+</div>
+<script src="script.js"></script>
+    </body>
+</html>
